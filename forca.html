@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Panda Sabichão</title>
+    <link rel="stylesheet" href="forca.css">
+</head>
+<body>
+    <section>
+        <header>PANDA SABICHÃO OFICIAL</header>
+        
+        <h1>Descubra a verdade sobre o mundo com o Panda Sabichão</h1>
+        <h2>Mas cuidado... Não somos responsáveis pelo o que você pode descobrir aqui.</h2>
+        <h3>Lide com a verdade.</h3>
+    </section>
+
+    <div class="container">
+        <figure>
+            <img src="pandamagico.png" alt="Panda Sabichão" width="250" height="360">
+            <figcaption>Esse é o <em>Panda Sabichão</em></figcaption>
+        </figure>
+
+        <div class="input-group">
+            <input type="text" id="pergunta" placeholder="Pergunte qualquer coisa!">
+            <button type="button" name="button" onclick="perguntaPanda();">Resposta</button>
+            <div class="response" id="resposta"></div>
+        </div>
+    </div>
+
+    <div class="headline">site 100% confiável pode relaxar</div>
+
+    <script>
+        const itens = ['Sim', 'Não', 'Não sei', 'Acho que não', 'Talvez', 'Acho que sim', 
+        'Não sei não....', 'O que você acha?', 'Mas é lógico!', 'SIMMM', 'Namm', 'Nunca!!', 
+        'Claro... Aham...','Sei lá'];
+
+        function perguntaPanda(){
+            let randomIndex = Math.floor(Math.random() * itens.length);
+            document.getElementById('resposta').innerText = itens[randomIndex];
+        }
+    </script>
+</body>
+</html>
